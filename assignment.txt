@@ -1,0 +1,98 @@
+Q1. What is Emmet ?
+
+Ans: Emmet is a built-in feature in Visual Studio Code. You don’t have to install any extensions for emmet support. Emmet prevents you from writing the entire code by yourself by providing Emmet abbreviation. Emmet is enabled by default in html, haml, pug, slim, jsx, xml, xsl, css, scss, sass, less and stylus files, and also in languages that inherits from any of the above like handlebars and PHP.
+
+
+
+
+Q2. Difference between library and framework.
+
+Ans: Both libraries and frameworks are reusable code written by someone else. Their purpose is to help you solve common problems in easier ways.
+
+We can use a house as a metaphor to explain the difference between these concepts.
+
+A library is like building your home from scratch, you have the choice to make your house as you wish, with any architecture you like, you can sort your rooms in the way you like.
+
+On the other hand, Framework is like buying a new house, you don’t have to deal with building problems, but you can’t choose how to sort your rooms because the house is already built.
+
+The technical difference between a framework and library lies in a term called inversion of control. When you use a library, you are in charge of the application flow. You choose when and where to call the library. When you use a framework, the framework is in charge of the flow. It provides you with a few places to plug in your code, but it calls the code you plugged in as needed.
+
+
+
+
+Q3. What is CDN ? Why do we use it ?
+
+Ans: A content delivery network (CDN) is a group of geographically distributed servers that speed up the delivery of web content by bringing it closer to where users are. Data centers across the globe use caching, a process that temporarily stores copies of files, so that you can access internet content from a web-enabled device or browser more quickly through a server near you. CDNs cache content like web pages, images, and video in proxy servers near to your physical location. This allows you to do things like watch a movie, download software, check your bank balance, post on social media, or make purchases, without having to wait for content to load.
+
+You may not realize it, but if you’ve done almost anything online, a CDN has probably helped provide you with a fast, reliable, and consistent experience. Here’s a simple example of how content delivery networks manage traffic behind the scenes to make that happen:
+A CDN balances overall traffic to give everyone accessing internet content the best web experience possible. Think about it like routing traffic in the real world. There may be one route that’s usually the fastest from point A to point B if no other cars take it — but if it starts getting congested, it’s better for everyone if the traffic gets spread out over a few different routes. That may mean that you get sent on a roadway that’s a few minutes longer (or microseconds, when scaled to internet speeds) but you don’t get stuck in the traffic jam that’s forming on the route that is typically the fastest. It may also mean that you get sent on that fastest regular route, but without getting bogged down in traffic, because other cars are being sent on longer paths. So, it’s not a matter of slowing down, it’s about load-balancing and fully using all available resources.
+The fact is, without CDNs, we’d all be stuck in traffic jams a lot more often when surfing the web. 
+
+
+
+Q4. Why is React called React ?
+
+Ans: React is called React because it is a library that reacts to changes in data and updates the user interface accordingly. It was originally developed by Facebook and was released as an open-source project in 2013. The name "React" reflects its purpose of reacting to changes in data and rendering the appropriate changes in the user interface.
+
+
+
+Q5. What is crossorigin in script tag ?
+
+Ans: The crossorigin attribute in a <script> tag is used to specify how the browser should handle requests made by the script for resources that are hosted on a different domain or subdomain.
+
+When you load a script from a different domain or subdomain, the browser normally applies the Same-Origin Policy, which means that the script is only allowed to access resources on the same domain as the script itself. However, in certain situations, such as when you need to load a JavaScript file from a Content Delivery Network (CDN), you may need to allow the script to make cross-origin requests.
+
+The crossorigin attribute can take one of three values:
+
+anonymous: Indicates that the script should be allowed to make cross-origin requests, but without sending any credentials (such as cookies or authentication headers) along with the requests.
+
+use-credentials: Indicates that the script should be allowed to make cross-origin requests and should send any credentials associated with the request.
+
+null: Indicates that the script does not require any cross-origin access and should be subject to the Same-Origin Policy.
+
+By default, the crossorigin attribute is not set, which means that the script is subject to the Same-Origin Policy and cannot make cross-origin requests.
+
+
+
+
+Q6. What is diference between React and ReactDOM ?
+
+Ans: React and ReactDOM are two related but distinct libraries in the React ecosystem.
+
+React is a JavaScript library for building user interfaces. It allows you to create reusable UI components and manage the state of your application in a declarative manner using a Virtual DOM. React provides a set of APIs to create and manipulate components, handle events, and manage the state of your application.
+
+ReactDOM, on the other hand, is a library that provides the integration between React and the DOM (Document Object Model). It provides a set of APIs to render React components into the browser DOM, manipulate the DOM tree, and handle events.
+
+In other words, while React is responsible for defining and managing the components and their state, ReactDOM is responsible for rendering those components into the browser DOM and updating them when their state changes.
+
+To use React, you need to include the React library in your project. To use ReactDOM, you need to include both the React and ReactDOM libraries in your project.
+
+
+
+
+Q7. What is difference between react.development.js and react.production.js files via CDN ?
+
+Ans: React is available in two different versions: development and production.
+
+The development version of React, which is typically named react.development.js, includes additional warnings and debugging information that can help developers identify and fix issues during development. These warnings and messages are not meant for production use, as they can negatively impact performance and increase the file size.
+
+The production version of React, which is typically named react.production.js, is optimized for production use. It is smaller in size and does not include the additional warnings and debugging information found in the development version.
+
+When using a CDN to serve React, you can choose which version to use based on your needs. During development, you might want to use the development version to take advantage of the extra warnings and debugging information. However, for production use, you should use the production version to minimize the file size and optimize performance.
+
+It's worth noting that you should always test your application thoroughly with both the development and production versions of React to ensure that it works correctly and performs well in both environments.
+
+
+
+
+Q8. What is async and defer ?
+
+Ans: async and defer are two attributes that can be used in a <script> tag to control how scripts are loaded and executed on a web page.
+
+async is an attribute that tells the browser to download and execute the script asynchronously with the rest of the page. This means that the script will not block the rendering of the page and will execute as soon as it is downloaded, even if other resources on the page have not finished loading. This can improve the performance of the page by allowing the browser to download scripts in parallel with other resources.
+
+defer is an attribute that tells the browser to download the script in the background while the rest of the page is being parsed, but defer its execution until the page has finished parsing. This means that the script will not block the rendering of the page and will execute after the HTML has been parsed, but before the DOMContentLoaded event is fired. This can improve the performance of the page by allowing the browser to download and parse the script in parallel with other resources, while still ensuring that the script is executed in the correct order.
+
+The main difference between async and defer is that with async, the script is executed immediately after it is downloaded, even if the page has not finished loading, while with defer, the script is executed after the page has finished parsing.
+
+It's important to note that not all scripts are suitable for asynchronous or deferred loading. Scripts that rely on other resources on the page, such as CSS or other scripts, may need to be executed in a specific order and should not be loaded asynchronously or deferred. Additionally, scripts that manipulate the DOM or interact with other scripts on the page may require synchronous loading to function correctly.
